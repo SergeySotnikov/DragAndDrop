@@ -1,0 +1,44 @@
+<div>
+  <div class="row">
+    <div class="col-header skills">All Skills</div>
+
+    <div class="col-header student-skill">Student Skill</div>
+  </div>
+
+  <div class="row">
+    <div
+      class="list"
+      cdkDropList
+      #allSkillList="cdkDropList"
+      [cdkDropListData]="allSkills"
+      [cdkDropListConnectedTo]="[studentSkillList]"
+      (cdkDropListDropped)="onDrop($event)"
+    >
+      <div class="item angular" *ngFor="let skill of allSkills" cdkDrag>
+        <img src="{{skill.imgSRC}}" alt="" srcset="" />
+        {{skill.skill}}
+      </div>
+    </div>
+    <div
+      class="list"
+      cdkDropList
+      #studentSkillList="cdkDropList"
+      [cdkDropListData]="studentSkill"
+      [cdkDropListConnectedTo]="allSkillList"
+      (cdkDropListDropped)="onDrop($event)"
+    >
+      <div class="item angular" *ngFor="let skill of studentSkill" cdkDrag>
+        <img src="{{skill.imgSRC}}" alt="" srcset="" />
+        {{skill.skill}}
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="row center" (click)="save()">
+    <div class="col-header skills">Save</div>
+  </div>
+  <div class="row">
+    <span>{{showSkillList|json}} </span>
+  </div>
+</div>

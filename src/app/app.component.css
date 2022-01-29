@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  width: 70%;
+  padding-top: 5rem;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.row {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 2%;
+  min-height: 66px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.col-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+  box-shadow: 4px 4px 9px rgba(37, 34, 34, 0.36);
+  border-radius: 20px;
+  padding: 0.8rem 1rem;
+  color: rgb(31, 28, 28);
+}
+
+.item {
+  margin-bottom: 15px;
+  height: 66px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #eee;
+  box-shadow: 4px 4px 9px rgba(51, 47, 47, 0.3);
+  border-radius: 20px;
+  background: #f5f2f2;
+  cursor: grab;
+}
+
+.javascript img,
+.html img,
+.react img,
+.vue img,
+.css img,
+.angular img {
+  margin-right: 10%;
+  height: 50%;
+}
+
+.item:active {
+  cursor: grabbing;
+}
+
+.list {
+  width: 33%;
+  height: 70vh;
+}
+
+.skills {
+  background: linear-gradient(90deg, #ff85e4 0%, #229efd 179.25%);
+}
+
+.student-skill {
+  background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.drag {
+  border: 2px solid rgb(17 232 23 / 60%);
+}
+
+.hide {
+  display: none;
+}
+
+.active {
+  box-shadow: 0px -15px 15px -16px rgb(17 232 23 / 60%);
+}
+
+.center {
+  justify-content: center;
+}
+.center:hover {
+  cursor: pointer;
+}
